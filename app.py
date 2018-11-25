@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import os
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
@@ -55,7 +56,12 @@ def action(command, action):
     if command == "decrease":
         GPIO.output(6,GPIO.LOW)
         SpeedAction(action)
-    
+
+    if command == "restart":
+        GPIO.output(24,GPIO.HIGH)
+        time.sleep(1)
+        os.system("sudo shutdown -r now")
+
    # For each pin, read the pin state and store it in the pins dictionary:
     for pin in pins:
         pins[pin]['state'] = GPIO.input(pin)
