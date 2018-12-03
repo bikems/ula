@@ -15,7 +15,7 @@
 
 <body style="margin:50px; background-color:#CCCCD0">
       <img src="{{url_for('static',filename='ula_ucf.png')}}" style="border:2px solid black">
-      <div style="padding-top:40px">
+      <div style="padding-top:20px">
             <h1>ULA Web Server</h1>
       </div>
       <div style="padding-top:0px">
@@ -35,7 +35,7 @@
             {% endif %}
       </div>
 
-      <div style="padding-top:20px">
+      <div style="padding-top:10px">
             <h2>{{pins[23].name}}
                   {% if pins[23].state == true %}
                   is currently <strong>CCW</strong></h2>
@@ -52,7 +52,7 @@
             {% endif %}
       </div>
 
-      <div style="padding-top:20px">
+      <div style="padding-top:10px">
             <h2>Speed Control</h2>
             <div class="btn-group">
                   <a href="/decrease/5" class="btn btn-lg btn-primary" role="button">- -</a>
@@ -62,7 +62,7 @@
             </div>
       </div>
 
-      <div style="padding-top:40px">
+      <div style="padding-top:20px">
             <a href="/restart/0" onclick="return confirm('Are you sure?')">Restart RPi</a>
       </div>
 
