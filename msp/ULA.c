@@ -9,7 +9,7 @@ WDTCTL = WDTPW + WDTHOLD; // Stop WDT
 
 TA0CCTL0 = CCIE; // CCR0 interrupt enabled
 TA0CTL = TASSEL_2 | MC_1 | ID_3; // SMCLK/8, upmode
-TA0CCR0 = 290; // I have to calculate it, but I was lazy Hz
+TA0CCR0 = 270; // I have to calculate it, but I was lazy Hz
 
 P1OUT &= 0x00; // Shut down pins on P1
 P1DIR &= 0x00; // Set P1 pins as output
